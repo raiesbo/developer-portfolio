@@ -1,0 +1,46 @@
+[
+    {
+        "title": "archPortfolio",
+        "description": "Website dedicated to store my Architectutel projects and serve as an Online Portfolio. It is my first web project, acomplished in 2020 and hosted in firebase.",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JS(ES6+)"
+        ],
+        "links": {
+            "wesite": "https://archportfolio.raimonespasa.com/",
+            "github": "https://github.com/raiesbo/archPortfolio"
+        },
+        "date": "2020"
+    },
+    {
+        "title": "devPortfolio",
+        "description": "Online web portfolio where to describe some professional skills, experience, background and showcase featured projects in the software development, web application and websites context.",
+        "tags": [
+            "React",
+            "Sass",
+            "react-reveal"
+        ],
+        "links": {
+            "wesite": "https://raiesbo.com/",
+            "github": "https://github.com/raiesbo/devPortfolio"
+        },
+        "date": "2021"
+    },
+    {
+        "title": "octocat Profiler",
+        "description": "Improved version of the octocat Profiler. In this case, the application counts with ends points to fetch the data from the GitHub Api and serve it in a more efficient. The new version includes new graphs and other info.",
+        "tags": [
+            "React",
+            "D3.js",
+            "GitHub API",
+            "Node",
+            "Express"
+        ],
+        "links": {
+            "wesite": "https://octocat.raiesbo.com/",
+            "github": "https://github.com/raiesbo/octocatProfile_v2"
+        },
+        "date": "2021"
+    }
+]

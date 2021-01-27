@@ -1,0 +1,42 @@
+{
+    "name": "Raimon",
+    "surname": "Espasa",
+    "nickname": "raiesbo",
+    "email": "raiesbo@gmail.com",
+    "website": "raiesbo.com",
+    "archive": "archive.raiesbo.com",
+    "main_description": "I am Raimon Espasa, web developer and architect with a pastion for creating new things",
+    "about": {
+        "background": [
+            "I am an architect graduated from the --Polytechnic University of Valencia-- living in Berlin and for over a year and a half I started discovering and taking my first steps in to the world of web development and software engineering.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "I am passionate about reading, especially the fantasy genre, so when I'm not working or learning new things, I'm probably reading or going for a run."
+        ],
+        "skills": {
+            "languages": [
+                "JavaScript (ES6+)",
+                "Python",
+                "HTML",
+                "CSS"
+            ],
+            "Frameworks": [
+                "React",
+                "Node",
+                "D3.js",
+                "Sass"
+            ],
+            "Tools": [
+                "Git / Github",
+                "Bash",
+                "Postman",
+                "MongoDB"
+            ],
+            "Design": [
+                "InDesign",
+                "Photoshop",
+                "Ilustrator",
+                "Figma"
+            ]
+        }
+    }
+}

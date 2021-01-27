@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,15 +11,12 @@
 body {
   background-color: $bg-color-main;
   font-family: $text-font-main;
-  color: $text-color-main; 
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color: $text-color-main;
+  line-height: 1.5;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
