@@ -17,21 +17,19 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    line-height: 1.6em;
 
     .icons {
-        padding: 0;
         height: auto;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin: 0;
         color: $text-color-alt;
     
         a {
             text-decoration: inherit;
             color: inherit;
             cursor: pointer;
+            transition: ease 300ms;
         
             &:hover{
                 color: $text-color-special;
@@ -39,15 +37,24 @@
         
         }
     }
+
+    
+    h5 {
+        margin: 20px 0 0 0;
+        font-weight: 300;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        word-spacing: 4px;
+
+        span{
+            // color: $text-color-alt;
+            font-weight: 700;
+            transition: ease 300ms;
+
+            &:hover {
+                color: $text-color-special;
+            }
+        }
+    }
 }
 
-
-
-.footer-main h5 {
-    margin: 20px 0 0 0;
-    font-weight: 500;
-}
-
-.footer-main span{
-    color: $text-color-alt;
-}

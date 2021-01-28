@@ -12,15 +12,15 @@ const profil = require("../assets/profile.archive.json");
 const projects = require("../assets/projects.archive.json");
 
 
-const Main = (props) => {
+const Main = () => {
 
     return (
         <div className="main-container">
             {/* <Navbar /> */}
-            <Home />
+            <Home profil={profil} />
             <About profil={profil} />
-            {/* <Projects />
-            <Contact /> */}
+            <Projects projects={projects}/>
+            {/* <Contact /> */}
             <Footer />
         </div>
     )

@@ -11,7 +11,8 @@
             "wesite": "https://archportfolio.raimonespasa.com/",
             "github": "https://github.com/raiesbo/archPortfolio"
         },
-        "date": "2020"
+        "date": "2020",
+        "thumbnail": "img2"
     },
     {
         "title": "devPortfolio",
@@ -25,7 +26,8 @@
             "wesite": "https://raiesbo.com/",
             "github": "https://github.com/raiesbo/devPortfolio"
         },
-        "date": "2021"
+        "date": "2021",
+        "thumbnail": "img3"
     },
     {
         "title": "octocat Profiler",
@@ -41,6 +43,7 @@
             "wesite": "https://octocat.raiesbo.com/",
             "github": "https://github.com/raiesbo/octocatProfile_v2"
         },
-        "date": "2021"
+        "date": "2021",
+        "thumbnail": "img1"
     }
 ]

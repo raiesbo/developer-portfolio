@@ -1,91 +1,48 @@
-.projects-container {
-    width: 100%;
-    background-color:  #0a192f;
-    color: white;
-    padding: 60px 0 60px 0;
-    margin: 0;
-}
-
-
 .projects-main {
-    /* background-color: red; */
-    max-width: 900px;
-    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .projects-container {
+        max-width: 900px;
+        margin: auto 20px auto 20px;
+        display: flex;
+        flex-direction: row;
+
+        .section-title {
+            // background-color: red;
+            text-align: end;
+            width: 16rem;
+            margin: 0 60px 0 0;
+            color: $text-color-special;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-content {
+            // background-color: blue;
+            width: 100%;
+        }
+    }
 }
 
 
-.sectionTitle {
-    font-size: 2em;
-    padding: 0;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    font-family: var(--font-sans);
-}
+@media only screen and (max-width: 700px) {
+    .projects-main {
+    
+        .projects-container {
+            flex-direction: column;
+    
+            .section-title {
+                text-align: start;
+                margin: 0 0 30px 0;
+            }
+    
+            .section-content {
 
-.sectionTitle span {
-    color: var(--special-text-color);
-    font-family: var(--font-mono);
-}
-
-
-.project-tile {
-    display: grid;
-    grid-template-rows: 60px auto auto 100px;
-    grid-template-columns: 500px 1fr;
-    column-gap: 30px;
-    margin-bottom: 100px;
-    grid-template-areas:
-      "img title"
-      "img description"
-      "img tags"
-      "img icons";
-    align-content: center;
-}
-  
-.project-img {
-    grid-area: img;
-    padding: 0;
-    margin: 0;
-    max-width: 500px;
-    z-index: -1;
-
-}
-.project-title {
-    grid-area: title;
-    color: var(--main-text-color);
-    font-size: 1.5em;
-    margin: auto 0 auto 0;
-    padding: 0;
-    justify-self: end;
-    align-self: bottom;
-    position: relative;
-    bottom: 0;
-}
-  
-.project-description {
-    grid-area: 2 / 1 / 3 / 3;
-    background-color: var(--alt-bg-color);
-    padding: 20px;
-    margin: 10px 0 10px 450px;
-    border-radius: 8px;
-    justify-self: end;
-    text-align: end;
-}
-.tags {
-    grid-area: tags;
-    font-family: var(--font-mono);
-    justify-self: end;
-    margin: auto 0 auto 0;
-    padding: 0;
-    text-align: end;
-    word-spacing: 20px;
-}
-.project-icons {
-    grid-area: icons;
-    justify-self: end;
-}
-  
-.project-icons i {
-    margin: 30px 0 0 20px;
-    color: var(--main-text-color);
+            }
+        }
+    }
 }
