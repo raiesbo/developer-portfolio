@@ -14,9 +14,9 @@ const About = ({ profil }) => {
                         <h4 className="section-title">{Object.keys(about)[0].toUpperCase()}</h4>
                         <div className="section-content">
                             {
-                                about.background.map((item, idx) => {
+                                about.background.map((item, i) => {
                                     return (
-                                        <p key={idx} className="background-paragraph"> {item.split("--").map((item, id) => id % 2 != 0 ? <strong>{item}</strong> : item)} </p>
+                                        <p key={i} className="background-paragraph"> {item.split("--").map((item, id) => id % 2 !== 0 ? <strong>{item}</strong> : item)} </p>
                                     )
                                 })
                             }
@@ -26,7 +26,7 @@ const About = ({ profil }) => {
 
 
                 <Fade big>
-                    <div className="section">
+                    <div className="section section-2">
                         <h4 className="section-title">{Object.keys(about)[1]}</h4>
                         <div className="section-content tables">
                             {
@@ -34,9 +34,9 @@ const About = ({ profil }) => {
                                     return (
                                         <ul key={idx}>
                                             <li className="list-header">{item} </li>
-                                            {about.skills[item].map((item, idx) => {
+                                            {about.skills[item].map((item, idx2) => {
                                                 return (
-                                                    <li key={idx}>{item}</li>
+                                                    <li key={idx2}>{item}</li>
                                                 )
                                             })}
                                         </ul>

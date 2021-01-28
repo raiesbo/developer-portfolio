@@ -1,20 +1,27 @@
 .about-main {
+    // background-color: blue;
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 
     .about-container {
-        margin: auto 20px 60px 20px;
+        // background-color: orange;
+        margin: auto 20px auto 20px;
         max-width: 900px;
         display: flex;
         flex-direction: column;
 
+        .section-2 {
+            margin-top: 100px;
+        }
+
         .section {
+            // background-color: red;
             display: flex;
             flex-direction: row;
-            margin-top: 60px;
 
             .section-title {
                 text-align: end;

@@ -6,19 +6,22 @@ import Fade from 'react-reveal/Fade';
 
 
 const Projects = ({ projects }) => {
+    const images = require.context('../../img', true);
 
+    const projectsList = projects.map((project, idx) => {
+        const imgName = project.thumbnail
+        const img = images(`./${imgName}.jpg`).default;
 
-    const projectsList = projects.map(project => {
         return (
 
-            <div className="project-tile">
-                <img src={project.thumbnail} alt="projects-thumbnail" />
+            <div className="project-tile" key={idx}>
+                <img src={img} alt="projects-thumbnail" className="projects-thumbnail" />
                 <h5 className="project-title">{project.title}</h5>
                 <p className="project-description">{project.description}</p>
-                <p className="tags">{project.tags.map(tag => <span className="tag">{tag}</span>)}</p>
+                <p className="project-tags">{project.tags.map((tag, id) => <span className="tag" key={id}>{tag}</span>)}</p>
                 <div className="project-icons">
-                    <a href="https://github.com/raiesbo/archPortfolio" target="_blank" rel="noreferrer"><i className="fab fa-github fa-lg"></i></a>
-                    <a href="https://archportfolio.raimonespasa.com/" target="_blank" rel="noreferrer"><i className="fas fa-external-link-alt fa-lg"></i></a>
+                    <i class="fas fa-caret-right fa-xs"></i><a href="https://github.com/raiesbo/archPortfolio" target="_blank" rel="noreferrer">GITHUB</a>
+                    <i class="fas fa-caret-right fa-xs"></i><a href="https://archportfolio.raimonespasa.com/" target="_blank" rel="noreferrer">LINK</a>
                 </div>
             </div>
 
@@ -27,19 +30,30 @@ const Projects = ({ projects }) => {
 
     return (
         <div className="projects-main" id="projects">
-
             <div className="projects-container">
 
-                <h4 className="section-title">Featured projects</h4>
                 <Fade cascade>
-                    <div className="section-content">
-                        {projectsList}
+                    <div className="section section-1">
+                        <h4 className="section-title">Featured projects</h4>
+
+                        <div className="section-content">
+                            {projectsList}
+                        </div>
+
                     </div>
                 </Fade>
 
+                <Fade cascade>
+                    <div className="section section-2">
+                        <h4 className="section-title">More projects</h4>
 
+                        <div className="section-content">
+                            <p>To see more projects pleace visit: <i class="fas fa-arrow-right"></i><a href="https://archive.raiesbo.com/" className="link">ARCHIVE</a> <i class="fas fa-arrow-left"></i></p>
+                        </div>
+
+                    </div>
+                </Fade>
             </div>
-
         </div>
     )
 }

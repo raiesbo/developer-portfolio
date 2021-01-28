@@ -5,11 +5,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
 
     .home-container {
-        // background-color: orange;
         margin: 0 20px 0 20px;
-        max-width: 1100px;
+        max-width: 1150px;
         width: 100%;
 
         .intro {
@@ -20,10 +20,9 @@
             font-weight: 400;
         }
 
-
         .title {
             font-family: $text-font-alt;
-            max-width: 650px;
+            max-width: 750px;
             font-size: 2.7rem;
             font-weight: 400;
             margin: 7% 20px 7% 20px;
@@ -33,12 +32,29 @@
             }
         }
 
+        i {
+            margin: 0 10px 0 15px;
+            color: $text-color-special;
+        }
 
         .contact {
             margin: auto 20px auto 20px;
             font-family: $text-font-alt;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 400;
+            // white-space: nowrap;
+
+            .email {
+                // color: $text-color-special;
+                transition: ease 200ms;
+                padding: 5px;
+
+                &:hover {
+                    background-color: $text-color-special;
+                    color: $bg-color-main;
+
+                }
+            }
         }
     }
 }
@@ -46,7 +62,27 @@
 
 
 
+@media only screen and (max-width: 700px) {
+    .home-main {
+    
+        .home-container {
+    
+            .intro {
 
+            }
+    
+            .title {
+
+            }
+    
+            i {
+                margin: 0;
+            }
+    
+
+        }
+    }
+}
 
 
 

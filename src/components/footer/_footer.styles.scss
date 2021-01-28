@@ -4,11 +4,12 @@
     display: flex;
     align-content: center;
     justify-content: center;
-
 }
 
+
 .footer-container {
-    color: $text-font-main;
+    font-family: $text-font-alt;
+    color: $text-color-alt2;
     width: 500px;
     height: 100%;
     margin: 0 20px 0 20px;
@@ -38,17 +39,16 @@
         }
     }
 
-    
     h5 {
         margin: 20px 0 0 0;
         font-weight: 300;
         font-size: 0.9rem;
-        letter-spacing: 2px;
-        word-spacing: 4px;
+        // letter-spacing: 2px;
+        // word-spacing: 4px;
 
         span{
-            // color: $text-color-alt;
-            font-weight: 700;
+            color: $text-color-main;
+            font-weight: 500;
             transition: ease 300ms;
 
             &:hover {

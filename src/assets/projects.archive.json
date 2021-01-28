@@ -8,11 +8,11 @@
             "JS(ES6+)"
         ],
         "links": {
-            "wesite": "https://archportfolio.raimonespasa.com/",
+            "website": "https://archportfolio.raimonespasa.com/",
             "github": "https://github.com/raiesbo/archPortfolio"
         },
         "date": "2020",
-        "thumbnail": "img2"
+        "thumbnail": "archProject_500x300"
     },
     {
         "title": "devPortfolio",
@@ -23,11 +23,11 @@
             "react-reveal"
         ],
         "links": {
-            "wesite": "https://raiesbo.com/",
+            "website": "https://raiesbo.com/",
             "github": "https://github.com/raiesbo/devPortfolio"
         },
         "date": "2021",
-        "thumbnail": "img3"
+        "thumbnail": "devPortfolio_500x300"
     },
     {
         "title": "octocat Profiler",
@@ -40,10 +40,10 @@
             "Express"
         ],
         "links": {
-            "wesite": "https://octocat.raiesbo.com/",
+            "website": "https://octocat.raiesbo.com/",
             "github": "https://github.com/raiesbo/octocatProfile_v2"
         },
         "date": "2021",
-        "thumbnail": "img1"
+        "thumbnail": "octoProject_500x300"
     }
 ]
