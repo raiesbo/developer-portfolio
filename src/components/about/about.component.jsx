@@ -16,7 +16,7 @@ const About = ({ profil }) => {
                             {
                                 about.background.map((item, i) => {
                                     return (
-                                        <p key={i} className="background-paragraph"> {item.split("--").map((item, id) => id % 2 !== 0 ? <strong>{item}</strong> : item)} </p>
+                                        <p key={i} className="background-paragraph"> {item.split("--").map((item, id) => id % 2 !== 0 ? <span className="text-highlight">{item}</span> : item)} </p>
                                     )
                                 })
                             }

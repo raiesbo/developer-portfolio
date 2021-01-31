@@ -15,13 +15,13 @@ export default function Skills({ profil }) {
                         <h4 className="section-title">{Object.keys(about)[1]}</h4>
                         <div className="section-content tables">
                             {
-                                Object.keys(about.skills).map((item, idx) => {
+                                Object.keys(about.skills).map((item, id) => {
                                     return (
-                                        <ul key={idx}>
+                                        <ul key={id}>
                                             <li className="list-header">{item} </li>
-                                            {about.skills[item].map((item, idx2) => {
+                                            {about.skills[item].map((item, i) => {
                                                 return (
-                                                    <li key={idx2}>{item}</li>
+                                                    <li key={i}>{item}</li>
                                                 )
                                             })}
                                         </ul>
