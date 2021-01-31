@@ -29,6 +29,7 @@
 
             .text-highlight {
                 font-weight: 600;
+                color: $text-color-alt;
             }
         }
 
@@ -48,6 +49,7 @@
                 // color: $text-color-special;
                 transition: ease 200ms;
                 padding: 5px;
+                color: $text-color-alt;
 
                 &:hover {
                     background-color: $text-color-special;
@@ -68,15 +70,23 @@
         .home-container {
     
             .intro {
-
+                margin: auto 20px auto 20px;
+                font-size: 8vw;
             }
     
             .title {
-
+                margin: 20% 20px 20% 20px;
+                font-size: 8vw;
             }
     
             i {
                 margin: 0;
+            }
+
+            .contact .email {
+                margin-top: 10px;
+                display: block;
+                text-align: center;
             }
     
 

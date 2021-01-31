@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/navbar/navbar.component";
 import Home from "../components/home/home.component";
 import About from "../components/about/about.component";
+import Skills from "../components/about/skills.component";
 import Projects from "../components/projects/projects.component";
 // import MoreProjects from "../components/projects/moreprojects.component";
 import Contact from "../components/contact/contact.component";
@@ -16,9 +17,10 @@ const Main = () => {
 
     return (
         <div className="main-container">
-            {/* <Navbar /> */}
+            <Navbar />
             <Home profil={profil} />
             <About profil={profil} />
+            <Skills profil={profil} />
             <Projects projects={projects}/>
             {/* <Contact /> */}
             <Footer />

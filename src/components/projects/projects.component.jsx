@@ -10,7 +10,7 @@ const Projects = ({ projects }) => {
 
     const projectsList = projects.map((project, idx) => {
         const imgName = project.thumbnail
-        const img = images(`./${imgName}.jpg`).default;
+        const img = images(`./${imgName}`).default;
 
         return (
 
@@ -48,7 +48,11 @@ const Projects = ({ projects }) => {
                         <h4 className="section-title">More projects</h4>
 
                         <div className="section-content">
-                            <p>To see more projects pleace visit: <i class="fas fa-arrow-right"></i><a href="https://archive.raiesbo.com/" className="link">ARCHIVE</a> <i class="fas fa-arrow-left"></i></p>
+                            <p>To see more projects pleace visit:
+                                <span>
+                                    <i class="fas fa-arrow-right"></i><a href="https://archive.raiesbo.com/" className="link">ARCHIVE</a> <i class="fas fa-arrow-left"></i>
+                                </span>
+                            </p>
                         </div>
 
                     </div>

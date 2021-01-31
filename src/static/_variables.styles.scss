@@ -1,8 +1,7 @@
 $text-color-main: #444452;
 $text-color-alt: #36363c;
 $text-color-alt2: #bdbdbd;
-$text-color-special: #388bfd;
-$text-color-special2: #4E9FEB;
+$text-color-special: #4E9FEB;
 
 $text-font-main: Apercu,"Source Sans Pro",system,system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
 $text-font-main2: 'Source Code Pro', monospace;
@@ -16,3 +15,74 @@ $bg-color-alt2: #232d3b;
 $border-color: #1f477e;
 $shadow-color: #e4e4e4;
 
+body {
+    $text-color-main: #0a192f;
+    $text-color-alt: #1e3352b7;
+    $text-color-alt2: #bdbdbd;
+    $text-color-special: #4E9FEB;
+
+    $text-font-main: Apercu,"Source Sans Pro",system,system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+    $text-font-main2: 'Source Code Pro', monospace;
+    $text-font-alt: 'Montserrat', sans-serif;
+    $text-font-alt2: 'Source Code Pro', monospace;
+    
+    $bg-color-main: #0a192f;
+    $bg-color-alt: #1e3352b7;
+    
+    $border-color: #1f477e;
+    $shadow-color: #040911;
+}
+
+// $text-color-main: #ccd6f6;
+// $text-color-alt: #e6f1ff;
+// $text-color-alt2: #bdbdbd;
+// $text-color-special: #4E9FEB;
+
+// $bg-color-main: #0a192f;
+// $bg-color-alt: #1e3352b7;
+
+// $border-color: #1f477e;
+// $shadow-color: #040911;
+
+ @mixin dark-mode {
+     @at-root {
+        $text-color-main: #0a192f;
+        $text-color-alt: #1e3352b7;
+        $text-color-alt2: #bdbdbd;
+        $text-color-special: #4E9FEB;
+
+        $text-font-main: Apercu,"Source Sans Pro",system,system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+        $text-font-main2: 'Source Code Pro', monospace;
+        $text-font-alt: 'Montserrat', sans-serif;
+        $text-font-alt2: 'Source Code Pro', monospace;
+        
+        $bg-color-main: #0a192f;
+        $bg-color-alt: #1e3352b7;
+        
+        $border-color: #1f477e;
+        $shadow-color: #040911;
+     } 
+ }
+
+ @mixin light-monde {
+        $text-color-main: #444452;
+        $text-color-alt: #36363c;
+        $text-color-alt2: #bdbdbd;
+        $text-color-special: #4E9FEB;
+
+        $text-font-main: Apercu,"Source Sans Pro",system,system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+        $text-font-main2: 'Source Code Pro', monospace;
+        $text-font-alt: 'Montserrat', sans-serif;
+        $text-font-alt2: 'Source Code Pro', monospace;
+
+        $bg-color-main: #F8F8F8;
+        $bg-color-alt: white;
+        $bg-color-alt2: #232d3b;
+
+        $border-color: #1f477e;
+        $shadow-color: #e4e4e4;
+ }
+
+//  body {
+//     @include dark-mode;
+//  }

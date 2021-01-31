@@ -24,30 +24,6 @@ const About = ({ profil }) => {
                     </div>
                 </Fade>
 
-
-                <Fade big>
-                    <div className="section section-2">
-                        <h4 className="section-title">{Object.keys(about)[1]}</h4>
-                        <div className="section-content tables">
-                            {
-                                Object.keys(about.skills).map((item, idx) => {
-                                    return (
-                                        <ul key={idx}>
-                                            <li className="list-header">{item} </li>
-                                            {about.skills[item].map((item, idx2) => {
-                                                return (
-                                                    <li key={idx2}>{item}</li>
-                                                )
-                                            })}
-                                        </ul>
-                                    )
-                                })
-                            }
-
-                        </div>
-                    </div>
-                </Fade>
-
             </div>
         </div>
     )

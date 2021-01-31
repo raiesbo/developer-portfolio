@@ -6,11 +6,10 @@
     justify-content: center;
 }
 
-
 .footer-container {
-    font-family: $text-font-alt;
+    font-family: $text-font-main;
     color: $text-color-alt2;
-    width: 500px;
+    width: 450px;
     height: 100%;
     margin: 0 20px 0 20px;
     display: flex;
@@ -23,8 +22,8 @@
         height: auto;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        color: $text-color-alt;
+        justify-content: space-around;
+        // color: $text-color-alt;
     
         a {
             text-decoration: inherit;
@@ -35,16 +34,15 @@
             &:hover{
                 color: $text-color-special;
             }
-        
         }
     }
 
     h5 {
         margin: 20px 0 0 0;
         font-weight: 300;
-        font-size: 0.9rem;
+        font-size: 1rem;
         // letter-spacing: 2px;
-        // word-spacing: 4px;
+        word-spacing: 4px;
 
         span{
             color: $text-color-main;

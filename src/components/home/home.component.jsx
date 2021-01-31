@@ -8,7 +8,7 @@ const Home = ({ profil }) => {
             <Fade big>
                 <div className="home-container">
 
-                    <h4 className="intro">Hello! </h4>
+                    <h4 className="intro">Hello! 👋 </h4>
                     <h1 className="title">{ profil.main_description.split("--").map((item, idx) => idx % 2 !== 0 ? <span className="text-highlight" key={idx}>{ item }</span> : item)}</h1>
                     {/* <h2 className="subtitle">Architect and Web Developer.</h2>
                     <p>I'm an Architect and Web Developer based in Berlin, passionate about technology,

@@ -5,18 +5,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 10%;
 
     .about-container {
         // background-color: orange;
-        margin: auto 20px auto 20px;
+        margin: 5% 20px auto 20px;
         max-width: 900px;
         display: flex;
         flex-direction: column;
 
-        .section-2 {
-            margin-top: 100px;
-        }
 
         .section {
             // background-color: red;
@@ -41,28 +38,6 @@
                 }
             }
 
-            .tables {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                ul {
-                    list-style: none;
-
-                    li {
-                        font-size: 0.9rem;
-                        font-weight: 300;
-                        margin: 5px 0;
-                    }
-
-                    .list-header {
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        font-size: 1rem;
-                    }
-
-                }
-            }
         }
     }
 }
@@ -83,11 +58,10 @@
                     margin: 0 0 30px 0;
                 }
 
-                .tables {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-                    justify-content: space-between;
+                .section-content {
+                    margin-left: 10px;
                 }
+
 
             }
         }

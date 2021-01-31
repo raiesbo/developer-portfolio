@@ -1,36 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 // import { useState } from "react";
 // import "./navbar.styles.scss";
 
 
 
-const Navbar = (props) => {
+const Navbar = () => {
+    const [ burgerMenu, setBurgerMenu ] = useState(false)
+
+    const handleClickBurger = () => {
+        setBurgerMenu(!burgerMenu)
+    }
+
+
     const menu = {
         Home: "#home",
         About: "#about",
-        Projects: "#projects",
-        Contact: "#contact"
+        Skills: "#skills",
+        Projects: "#projects"
     }
 
-    const menuList = Object.keys(menu).map((item, id) => {
+
+    const menuList = Object.keys(menu).map((item, i) => {
         return (
-            <li>
-                <a href={menu[item]}> <span className="subIndex">0{id + 1}.</span> { item }</a>
+            <li
+                key={i}
+                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards ${i / Object.keys(menu).length + 0.4}s` } : null}
+            >
+                <a
+                    href={menu[item]}
+                    onClick={handleClickBurger}
+                > {item}</a>
             </li>
         )
     })
 
-    return(
-        <header className="navbar-container">
+    return (
+        <header className="navbar-main">
 
-            <div className="navbar-main">
+            <div className="navbar-container">
                 <a href="#home">
                     <div className="logo">
                         <p>REB</p>
                     </div>
                 </a>
-                
-                <nav>
+
+                <div className={"burger"} onClick={handleClickBurger}>
+                    <div className={"line1" + (burgerMenu ? " toggle1" : "")}></div>
+                    <div className={"line2" + (burgerMenu ? " toggle2" : "")}></div>
+                    <div className={"line3" + (burgerMenu ? " toggle3" : "")}></div>
+                </div>
+
+                <nav className={burgerMenu ? " nav-active" : ""}>
                     <ul>
                         {menuList}
                     </ul>
@@ -38,7 +58,7 @@ const Navbar = (props) => {
 
             </div>
 
-            
+
 
         </header>
     )
