@@ -15,7 +15,7 @@
             "github": "https://github.com/raiesbo/octocatProfile_v2"
         },
         "date": "2021",
-        "thumbnail": "octoProject_500x300.gif"
+        "thumbnail": "octoProject_500x300_v2.gif"
     },
     {
         "title": "devPortfolio",
@@ -30,7 +30,7 @@
             "github": "https://github.com/raiesbo/devPortfolio"
         },
         "date": "2021",
-        "thumbnail": "devPortfolio_500x300.jpg"
+        "thumbnail": "devPortfolio_500x300_v2.gif"
     },
     
     {
@@ -46,6 +46,6 @@
             "github": "https://github.com/raiesbo/archPortfolio"
         },
         "date": "2020",
-        "thumbnail": "archProject_500x300.gif"
+        "thumbnail": "archProject_500x300_v2.gif"
     }
 ]

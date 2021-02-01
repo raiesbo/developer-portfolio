@@ -8,7 +8,7 @@
 
 .footer-container {
     font-family: $text-font-main;
-    color: $text-color-alt2;
+    color: $text-color-main;
     width: 450px;
     height: 100%;
     margin: 0 20px 0 20px;
@@ -40,12 +40,12 @@
     h5 {
         margin: 20px 0 0 0;
         font-weight: 300;
-        font-size: 1rem;
-        // letter-spacing: 2px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
         word-spacing: 4px;
 
         span{
-            color: $text-color-main;
+            color: $text-color-alt;
             font-weight: 500;
             transition: ease 300ms;
 
