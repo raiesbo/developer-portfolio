@@ -18,6 +18,13 @@
             font-family: $text-font-alt;
             font-size: 2.5rem;
             font-weight: 400;
+            // animation: hello 3s infinite;
+
+            .hand {
+                display: inline-block;
+                cursor: pointer;
+                // animation: hello ease-in-out 0.25s 3 0.4s;
+            }
         }
 
         .title {
@@ -43,7 +50,14 @@
             font-family: $text-font-alt;
             font-size: 1.15rem;
             font-weight: 400;
-            // white-space: nowrap;
+            
+            .arrow-email {
+                transition: ease 200ms;
+            }
+
+            &:hover .arrow-email {
+                transform: translateX(10px);
+            }
 
             .email {
                 // color: $text-color-special;
@@ -53,13 +67,14 @@
 
                 &:hover {
                     background-color: $text-color-special;
-                    color: $bg-color-main;
+                    color: $text-color-alt;
                 }
+
+                
             }
         }
     }
 }
-
 
 
 
@@ -88,10 +103,19 @@
                 text-align: center;
                 justify-self: center;
             }
-    
         }
     }
 }
 
-
+@keyframes hello {
+    0%, 100% {
+        transform: rotate(0deg);
+        transform-origin: 100% 100%;
+        
+    }
+    50% {
+        transform: rotate(20deg);
+        transform-origin: 100% 100%;
+    }
+}
 

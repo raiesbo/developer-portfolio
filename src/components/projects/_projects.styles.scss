@@ -22,6 +22,7 @@
                 color: $text-color-special;
             }
 
+
             p {
                 font-size: 1rem;
                 font-weight: 300;
@@ -31,14 +32,33 @@
                 display: block;
                 text-align: center;
                 margin-top: 30px;
+
+                .fa-arrow-right {
+                    transition: ease 200ms;
+                }
+
+                .fa-arrow-left {
+                    transition: ease 200ms;
+                    transform: translateX(-5px);
+                }
+
+                &:hover .fa-arrow-right {
+                    transform: translateX(7px);
+                }
+
+                &:hover .fa-arrow-left {
+                    transform: translateX(-10px);
+                }
+                
                 a {
                     font-weight: 700;
                     padding: 5px;
                     transition: ease-in 200ms;
+                    margin: 0;
     
                     &:hover {
                         background-color: $text-color-special;
-                        color: $bg-color-main;
+                        color: $text-color-alt;
                     }
                 }
             }
