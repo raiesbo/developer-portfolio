@@ -48,7 +48,7 @@ const Projects = ({ projects }) => {
                         <h4 className="section-title">More projects</h4>
 
                         <div className="section-content">
-                            <p>To see more projects pleace visit:
+                            <p>After the featured projects, if you are more curious and want to see my complete list of projects, please visit:
                                 <span>
                                     <i class="fas fa-arrow-right"></i><a href="https://archive.raiesbo.com/" className="link">ARCHIVE</a> <i class="fas fa-arrow-left"></i>
                                 </span>

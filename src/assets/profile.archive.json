@@ -5,12 +5,12 @@
     "email": "raiesbo@gmail.com",
     "website": "raiesbo.com",
     "archive": "archive.raiesbo.com",
-    "main_description": "I am --Raimon Espasa--, design-driven --web developer-- and --architect--, passionate about building things and new technologies.",
+    "main_description": "I am --Raimon Espasa--, design-driven --web developer-- and --architect--, passionate about building exceptional websites and applications.",
     "about": {
         "background": [
-            "I am an architect graduated from the --Polytechnic University-- of Valencia and based in Berlin and in mid-2019 I discovered and began my journy in to the world of --web development-- and software engineering.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "I am passionate about reading, especially the fantasy genre, so --when I am not in front of the computer--, I am probably reading, learning new things or going for a run."
+            "I am an architect graduated in 2016 from the --Polytechnic University of Valencia--, based in Berlin and in mid-2019 I discovered and took my first steps in the field of web development and software engineering.",
+            "Passionate about detail, as a --front-end developer-- I enjoy writing well-written and efficient code that translates into attractive and functional interfaces with modern frameworks. My 5-year experience as an architect has taught me not only the basics of design, the good development of projects but also has taught me to work as a team, the collective ownership of projects and empathy to share my experience and knowledge with my team.",
+            "I enjoy reading, especially the fantasy genre, so --when I am not in front of the computer--, I am probably enjoying a good book, learning new things or going for a run."
         ],
         "skills": {
             "languages": [
@@ -20,9 +20,9 @@
                 "CSS"
             ],
             "Frameworks": [
-                "React",
-                "Node",
-                "D3.js",
+                "ReactJS",
+                "NodeJS",
+                "D3JS",
                 "Sass"
             ],
             "Tools": [

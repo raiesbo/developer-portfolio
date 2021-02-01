@@ -27,16 +27,23 @@
                 font-weight: 300;
             }
 
-            a {
-                font-weight: 700;
-                padding: 5px;
-                transition: ease-in 200ms;
-
-                &:hover {
-                    background-color: $text-color-special;
-                    color: $bg-color-main;
+            span {
+                display: block;
+                text-align: center;
+                margin-top: 30px;
+                a {
+                    font-weight: 700;
+                    padding: 5px;
+                    transition: ease-in 200ms;
+    
+                    &:hover {
+                        background-color: $text-color-special;
+                        color: $bg-color-main;
+                    }
                 }
             }
+
+            
         }
 
         .section {
@@ -138,14 +145,14 @@
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 850px) {
     .projects-main {
         
     
         .projects-container {
 
             .section-2 {
-                text-align: center;
+                // text-align: center;
                 
                 span {
                     display: block;
