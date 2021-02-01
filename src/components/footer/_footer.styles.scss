@@ -7,8 +7,8 @@
 }
 
 .footer-container {
-    font-family: $text-font-main;
-    color: $text-color-main;
+    font-family: var(--text-font-main);
+    color: var(--text-color-main);
     width: 450px;
     height: 100%;
     margin: 0 20px 0 20px;
@@ -32,7 +32,7 @@
             transition: ease 300ms;
         
             &:hover{
-                color: $text-color-special;
+                color: var(--text-color-special);
             }
         }
     }
@@ -45,12 +45,12 @@
         word-spacing: 4px;
 
         span{
-            color: $text-color-alt;
+            color: var(--text-color-alt);
             font-weight: 500;
             transition: ease 300ms;
 
             &:hover {
-                color: $text-color-special;
+                color: var(--text-color-special);
             }
         }
     }

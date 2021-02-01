@@ -1,6 +1,5 @@
 .projects-main {
     width: 100%;
-    // min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +18,7 @@
             i {
                 margin-left: 10px;
                 margin-right: 10px;
-                color: $text-color-special;
+                color: var(--text-color-special);
             }
 
 
@@ -57,13 +56,11 @@
                     margin: 0;
     
                     &:hover {
-                        background-color: $text-color-special;
-                        color: $text-color-alt;
+                        background-color: var(--text-color-special);
+                        color: var(--text-color-alt);
                     }
                 }
             }
-
-            
         }
 
         .section {
@@ -76,7 +73,7 @@
                 text-align: end;
                 width: 16rem;
                 margin: 0 60px 0 0;
-                color: $text-color-special;
+                color: var(--text-color-special);
                 letter-spacing: 2px;
                 text-transform: uppercase;
             }
@@ -103,13 +100,13 @@
                         grid-area: img;
                         width: 400px;
                         margin-right: 30px;
-                        box-shadow: 0 0 30px $shadow-color;
+                        box-shadow: 0 0 30px var(--shadow-color);
                         border-radius: 5px;
                     }
 
 
                     .project-title {
-                        color: $text-color-alt;
+                        color: var(--text-color-alt);
                         grid-area: title;
                         font-size: 1rem;
                         text-transform: uppercase;
@@ -124,12 +121,11 @@
 
                     .project-tags {
                         grid-area: tags;
-                        color: $text-color-special;
+                        color: var(--text-color-special);
                         font-size: 0.7rem;
                         align-self: end;
 
                         .tag {
-                            // border: 1px solid $text-color-special;
                             border-radius: 5px;
                             padding: 2.5px;
                             margin-right: 5px;
@@ -149,13 +145,13 @@
                             transition: ease 200ms;
 
                             &:hover {
-                                color: $text-color-special;
+                                color: var(--text-color-special);
                             }
                         }
 
                         i {
                             margin-right: 5px;
-                            color: $text-color-special;
+                            color: var(--text-color-special);
                         }
                     }
                 }

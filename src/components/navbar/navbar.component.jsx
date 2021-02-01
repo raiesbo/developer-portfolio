@@ -7,24 +7,18 @@ import React, { useState, useEffect } from "react";
 const Navbar = () => {
     const [burgerMenu, setBurgerMenu] = useState(false)
     const [backButton, setbackButton] = useState(false)
+    const [darkMode, setDarkMode] = useState(true)
 
     const handleClickBurger = () => {
         setBurgerMenu(!burgerMenu)
     }
 
-    // const screenHight = screen.height;
-
-
-    const menu = {
-        Home: "#home",
-        About: "#about",
-        Skills: "#skills",
-        Projects: "#projects"
-    }
-
+    //////////////////
+    // SCROLL ARROW //
+    //////////////////
     useEffect(() => {
         window.addEventListener('scroll', (e) => {
-            if (window.pageYOffset <= window.screen.height) {
+            if (window.pageYOffset * 4 / 3 <= window.screen.height) {
                 setbackButton(false)
             } else {
                 setbackButton(true)
@@ -32,6 +26,38 @@ const Navbar = () => {
         });
     }, [])
 
+    ///////////////
+    // DARK MODE //
+    ///////////////
+    const handleMode = () => {
+        let memo = window.localStorage
+        memo.setItem("darkMode", !darkMode)
+        setDarkMode(!darkMode)
+    }
+
+    useEffect(() => {
+        let isDarkModeOn = window.localStorage.getItem("darkMode")
+        
+        if (isDarkModeOn === "false") {
+            setDarkMode(false)
+        }
+
+        if (!darkMode) {
+            document.querySelector("body").classList.add("light-mode");
+        } else {
+            document.querySelector("body").classList.remove("light-mode");
+        }
+    }, [darkMode])
+
+    ////////////////
+    // MENU ITEMS //
+    ////////////////
+    const menu = {
+        Home: "#home",
+        About: "#about",
+        Skills: "#skills",
+        Projects: "#projects"
+    }
 
     const menuList = Object.keys(menu).map((item, i) => {
         return (
@@ -46,8 +72,6 @@ const Navbar = () => {
             </li>
         )
     })
-
-
 
     return (
         <header className="navbar-main">
@@ -67,12 +91,19 @@ const Navbar = () => {
 
                 <nav className={burgerMenu ? " nav-active" : ""}>
                     <ul>
+                    
                         {menuList}
+
+                        <li>
+                            <div className="mode"
+                                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5.4s` } : null}
+                            >{ darkMode ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i> : <i className="far fa-circle" onClick={handleMode}></i> }</div>
+                        </li>
+
                     </ul>
                 </nav>
 
             </div>
-
 
             <a href="#home" ><i className={"fas fa-arrow-circle-up fa-2x arrow" + (backButton ? " arrow-active" : "")} ></i></a>
         </header>

@@ -24,7 +24,7 @@
                 text-align: end;
                 width: 16rem;
                 margin: 0 60px 0 0;
-                color: $text-color-special;
+                color: var(--text-color-special);
                 letter-spacing: 2px;
                 text-transform: uppercase;
             }
@@ -37,7 +37,7 @@
                     font-weight: 300;
 
                     .text-highlight {
-                        color: $text-color-alt;
+                        color: var(--text-color-alt);
                         font-weight: 500;
                     }
                 }
@@ -52,7 +52,6 @@
     .about-main {
 
         .about-container {
-
     
             .section {
                 flex-direction: column;

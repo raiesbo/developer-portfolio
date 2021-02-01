@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  background-color: $bg-color-main;
-  font-family: $text-font-main;
-  color: $text-color-main;
+  background-color: var(--bg-color-main);
+  font-family: var(--text-font-main);
+  color: var(--text-color-main);
   line-height: 1.5;
 }
 
@@ -36,11 +36,11 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $text-color-alt2;
+  background: var(--text-color-alt2);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $text-color-special;
+  background: var(--text-color-special);
 }

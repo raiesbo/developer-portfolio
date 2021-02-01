@@ -23,7 +23,7 @@
                 text-align: end;
                 width: 16rem;
                 margin: 0 60px 0 0;
-                color: $text-color-special;
+                color: var(--text-color-special);
                 letter-spacing: 2px;
                 text-transform: uppercase;
             }
@@ -55,7 +55,7 @@
                         text-transform: uppercase;
                         font-weight: 700;
                         font-size: 1rem;
-                        color: $text-color-alt;
+                        color: var(--text-color-alt);
                     }
 
                 }
@@ -70,10 +70,8 @@
 
         .skills-container {
 
-    
             .section {
                 flex-direction: column;
-
     
                 .section-title {
                     text-align: start;
@@ -88,7 +86,6 @@
                     align-items: center;
                     margin-left: 10px;
                 }
-
             }
         }
     }

@@ -15,7 +15,7 @@
         .intro {
             margin: auto 20px auto 20px;
             // background-color: red;
-            font-family: $text-font-alt;
+            font-family: var(--text-font-alt);
             font-size: 2.5rem;
             font-weight: 400;
             // animation: hello 3s infinite;
@@ -28,7 +28,7 @@
         }
 
         .title {
-            font-family: $text-font-alt;
+            font-family: var(--text-font-alt);
             max-width: 700px;
             font-size: 2.7rem;
             font-weight: 400;
@@ -36,18 +36,18 @@
 
             .text-highlight {
                 font-weight: 600;
-                color: $text-color-alt;
+                color: var(--text-color-alt);
             }
         }
 
         i {
             margin: 0 10px 0 15px;
-            color: $text-color-special;
+            color: var(--text-color-special);
         }
 
         .contact {
             margin: auto 20px auto 20px;
-            font-family: $text-font-alt;
+            font-family: var(--text-font-alt);
             font-size: 1.15rem;
             font-weight: 400;
             
@@ -66,10 +66,9 @@
                 // color: $text-color-alt;
 
                 &:hover {
-                    background-color: $text-color-special;
-                    color: $text-color-alt;
+                    background-color: var(--text-color-special);
+                    color: var(--text-color-alt);
                 }
-
                 
             }
         }
