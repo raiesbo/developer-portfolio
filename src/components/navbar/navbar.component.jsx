@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import { useState } from "react";
 // import "./navbar.styles.scss";
 
 
 
 const Navbar = () => {
-    const [ burgerMenu, setBurgerMenu ] = useState(false)
+    const [burgerMenu, setBurgerMenu] = useState(false)
+    const [backButton, setbackButton] = useState(false)
 
     const handleClickBurger = () => {
         setBurgerMenu(!burgerMenu)
     }
+
+    // const screenHight = screen.height;
 
 
     const menu = {
@@ -18,6 +21,16 @@ const Navbar = () => {
         Skills: "#skills",
         Projects: "#projects"
     }
+
+    useEffect(() => {
+        window.addEventListener('scroll', (e) => {
+            if (window.pageYOffset <= window.screen.height) {
+                setbackButton(false)
+            } else {
+                setbackButton(true)
+            }
+        });
+    }, [])
 
 
     const menuList = Object.keys(menu).map((item, i) => {
@@ -33,6 +46,8 @@ const Navbar = () => {
             </li>
         )
     })
+
+
 
     return (
         <header className="navbar-main">
@@ -59,7 +74,7 @@ const Navbar = () => {
             </div>
 
 
-
+            <a href="#home" ><i className={"fas fa-arrow-circle-up fa-2x arrow" + (backButton ? " arrow-active" : "")} ></i></a>
         </header>
     )
 

@@ -72,6 +72,23 @@
             }
         }
     }
+
+    .arrow {
+        display: none;
+        position: fixed;
+        right: 40px;
+        bottom: 30px;
+        transition: all 200ms ease-in-out;
+        z-index: -1;
+
+        &:hover {
+            color: $text-color-special;
+        }
+    }
+
+    .arrow-active {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -79,10 +96,7 @@
 
     
         .navbar-container {
-            // background-color: blue;
             margin: 0 20px 0 20px;
-            // justify-content: center;
-            // align-items: center;
     
             .logo{
                 display: none;
@@ -141,7 +155,7 @@
     
                     li {
                         opacity: 0;
-
+                        font-size: 1.4rem;
 
                         @keyframes navLinksFade {
                             from {
@@ -153,10 +167,20 @@
                                 transform: translate(0px);
                             }
                         }
-    
                     }
                 }
             }
         }
+
+        .arrow {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+}
+
+@media (max-height: 100vh) {
+    .arrow {
+        display: block;
     }
 }
