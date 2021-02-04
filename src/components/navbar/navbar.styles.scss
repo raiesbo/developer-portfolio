@@ -43,7 +43,8 @@
             align-items: center;
 
             div {
-                background-color: var(text-color-alt);
+                background-color: var(--text-color-alt);
+                // background-color: black;
                 height: 3px;
                 width: 25px;
                 margin: 5px;
@@ -52,7 +53,7 @@
         }
 
         nav {
-            width: 300px;
+            width: 400px;
             font-family: var(--text-font-alt);
             font-size: 0.9rem;
 
@@ -67,7 +68,33 @@
                     a {
                         text-decoration: none;
                         color: var(--text-color-main);
+                        transition: ease 200ms;
+
+                        &:hover {
+                            color: var(--text-color-special);
+                        }
                     }
+
+                    .nav-archive {
+                        font-weight: 700;
+                        color: var(--text-color-special);
+                    }
+
+                    i {
+                        cursor: pointer;
+                    }
+
+
+                    // .circle {
+                    //     align-self: bottom;
+                    //     justify-self: start;
+
+                    //     border: 1.5px solid var(--text-color-main);
+                    //     background-color: var(--text-color-main);
+                    //     height: 15px;
+                    //     width: 15px;
+                    //     border-radius: 50%;
+                    // }
                 }
             }
         }
@@ -148,7 +175,6 @@
                 // .mode {
                 //     display: inline;
                 // }
-
 
                 ul {
                     margin-top: 60px;

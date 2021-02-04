@@ -2,7 +2,7 @@
     
     {
         "title": "octocat Profiler",
-        "description": "Improved version of the octocat Profiler. In this case, the application counts with ends points to fetch the data from the GitHub Api and serve it in a more efficient. The new version includes new graphs and other info.",
+        "description": "Improved version of the octocat Profiler v1. In this new version, the application counts with server end points to fetch and process the data from the GitHub API and be more efficient. The new version also includes new graphs in D3.js.",
         "tags": [
             "React",
             "D3.js",
@@ -19,7 +19,7 @@
     },
     {
         "title": "devPortfolio",
-        "description": "Online web portfolio where to describe some professional skills, experience, background and showcase featured projects in the software development, web application and websites context.",
+        "description": "Online web portfolio where to describe some professional skills, experience, background, progress and showcase featured projects in the software development, web application and websites context.",
         "tags": [
             "React",
             "Sass",
@@ -35,14 +35,14 @@
     
     {
         "title": "archPortfolio",
-        "description": "Website dedicated to store my Architectutel projects and serve as an Online Portfolio. It is my first web project, acomplished in 2020 and hosted in firebase.",
+        "description": "Online space dedicated to storing my architecture projects, experience and serve as a portfolio. It has been my first full web project and the one that aroused my interest and passion for web development.",
         "tags": [
             "HTML",
             "CSS",
             "JS(ES6+)"
         ],
         "links": {
-            "website": "https://archportfolio.raimonespasa.com/",
+            "website": "https://archportfolio.raiesbo.com/",
             "github": "https://github.com/raiesbo/archPortfolio"
         },
         "date": "2020",

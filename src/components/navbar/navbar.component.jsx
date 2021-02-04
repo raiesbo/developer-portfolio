@@ -37,7 +37,7 @@ const Navbar = () => {
 
     useEffect(() => {
         let isDarkModeOn = window.localStorage.getItem("darkMode")
-        
+
         if (isDarkModeOn === "false") {
             setDarkMode(false)
         }
@@ -56,7 +56,8 @@ const Navbar = () => {
         Home: "#home",
         About: "#about",
         Skills: "#skills",
-        Projects: "#projects"
+        Projects: "#projects",
+        Archive: "https://archive.raiesbo.com/"
     }
 
     const menuList = Object.keys(menu).map((item, i) => {
@@ -68,7 +69,7 @@ const Navbar = () => {
                 <a
                     href={menu[item]}
                     onClick={handleClickBurger}
-                > {item}</a>
+                > {i === Object.keys(menu).length - 1 ? <span className="nav-archive">{item}</span> : item}</a>
             </li>
         )
     })
@@ -91,14 +92,23 @@ const Navbar = () => {
 
                 <nav className={burgerMenu ? " nav-active" : ""}>
                     <ul>
-                    
+
                         {menuList}
 
                         <li>
                             <div className="mode"
                                 style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5.4s` } : null}
-                            >{ darkMode ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i> : <i className="far fa-circle" onClick={handleMode}></i> }</div>
+                            >{darkMode ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i> : <i className="far fa-circle" onClick={handleMode}></i>}
+                            </div>
                         </li>
+                        {/* <li>
+                            <div
+                                className="circle"
+                                onClick={handleMode}
+                                style={!darkMode ? {backgroundColor: "transparent"}: null}
+                                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5s` } : null}
+                            ></div>
+                        </li> */}
 
                     </ul>
                 </nav>

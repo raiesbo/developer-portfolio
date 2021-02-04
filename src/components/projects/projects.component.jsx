@@ -20,8 +20,8 @@ const Projects = ({ projects }) => {
                 <p className="project-description">{project.description}</p>
                 <p className="project-tags">{project.tags.map((tag, id) => <span className="tag" key={id}>{tag}</span>)}</p>
                 <div className="project-icons">
-                    <i class="fas fa-caret-right fa-xs"></i><a href="https://github.com/raiesbo/archPortfolio" target="_blank" rel="noreferrer">GITHUB</a>
-                    <i class="fas fa-caret-right fa-xs"></i><a href="https://archportfolio.raimonespasa.com/" target="_blank" rel="noreferrer">LINK</a>
+                    <i class="fas fa-caret-right fa-xs"></i><a href={project.links.github} target="_blank" rel="noreferrer">GITHUB</a>
+                    <i class="fas fa-caret-right fa-xs"></i><a href={project.links.website} target="_blank" rel="noreferrer">LINK</a>
                 </div>
             </div>
 
