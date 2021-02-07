@@ -2,7 +2,7 @@
     
     {
         "title": "octocat Profiler",
-        "description": "Improved version of the octocat Profiler v1. In this new version, the application counts with server end points to fetch and process the data from the GitHub API and be more efficient. The new version also includes new graphs in D3.js.",
+        "description": "Full stack project that seeks to present the public github user information in a nicer looking way and provide some extra interesting filtered information and stats. This new version also includes new graphs in D3.js.",
         "tags": [
             "React",
             "D3.js",
@@ -18,6 +18,23 @@
         "thumbnail": "octoProject_500x300_v2.gif"
     },
     {
+        "title": "webdev archive",
+        "description": "Started as a simple projects-listing website and ended up as a full stack web app where, with a full CRUD functionality and login system, anyone can manage and keep track of their own projects.",
+        "tags": [
+            "React",
+            "CSS",
+            "NodeJS",
+            "Express",
+            "MongoDB"
+        ],
+        "links": {
+            "website": "https://archive.raiesbo.com/",
+            "github": "https://github.com/raiesbo/devPortfolio"
+        },
+        "date": "2021",
+        "thumbnail": "webdevarchive_500x300.gif"
+    },
+    {
         "title": "devPortfolio",
         "description": "Online web portfolio where to describe some professional skills, experience, background, progress and showcase featured projects in the software development, web application and websites context.",
         "tags": [
@@ -27,15 +44,14 @@
         ],
         "links": {
             "website": "https://raiesbo.com/",
-            "github": "https://github.com/raiesbo/devPortfolio"
+            "github": "https://github.com/raiesbo/webDevArchive"
         },
         "date": "2021",
         "thumbnail": "devPortfolio_500x300_v2.gif"
     },
-    
     {
         "title": "archPortfolio",
-        "description": "Online space dedicated to storing my architecture projects, experience and serve as a portfolio. It has been my first full web project and the one that aroused my interest and passion for web development.",
+        "description": "Online space dedicated to store my architecture projects, experience and serve as a portfolio. It has been my first full web project and the one that aroused my interest and passion for web development.",
         "tags": [
             "HTML",
             "CSS",

@@ -1,8 +1,5 @@
 import React from "react";
 import Fade from 'react-reveal/Fade';
-// import img1 from '../../img/octoProject_500x300.jpg';
-// import img2 from '../../img/archProject_500x300.jpg';
-// import img3 from '../../img/documentationPortfolio_500x300.jpg';
 
 
 const Projects = ({ projects }) => {
