@@ -1,12 +1,10 @@
+import Main from "./pages/main.page";
 import './static/main.styles.scss';
-import Main from "./pages/main.page"
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Main />
     </div>
   );
 }
-
-export default App;

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-// import { useState } from "react";
+import { useEffect, useState } from "react";
 // import "./navbar.styles.scss";
 
 
 
-const Navbar = () => {
+export default function Navbar() {
     const [burgerMenu, setBurgerMenu] = useState(false)
     const [backButton, setbackButton] = useState(false)
     const [darkMode, setDarkMode] = useState(true)
@@ -76,14 +75,12 @@ const Navbar = () => {
 
     return (
         <header className="navbar-main">
-
             <div className="navbar-container">
                 <a href="#home">
                     <div className="logo">
                         <p>REB</p>
                     </div>
                 </a>
-
                 <div className={"burger"} onClick={handleClickBurger}>
                     <div className={"line1" + (burgerMenu ? " toggle1" : "")}></div>
                     <div className={"line2" + (burgerMenu ? " toggle2" : "")}></div>
@@ -92,9 +89,7 @@ const Navbar = () => {
 
                 <nav className={burgerMenu ? " nav-active" : ""}>
                     <ul>
-
                         {menuList}
-
                         <li>
                             <div className="mode"
                                 style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5.4s` } : null}
@@ -109,16 +104,11 @@ const Navbar = () => {
                                 style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5s` } : null}
                             ></div>
                         </li> */}
-
                     </ul>
                 </nav>
-
             </div>
-
             <a href="#home" ><i className={"fas fa-arrow-circle-up fa-2x arrow" + (backButton ? " arrow-active" : "")} ></i></a>
         </header>
     )
 
 }
-
-export default Navbar;
