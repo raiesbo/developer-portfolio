@@ -31,7 +31,7 @@
             .section-content {
                 width: 100%;
 
-                .background-paragraph{
+                .background-paragraph {
                     margin-bottom: 30px;
                     font-weight: 300;
                 }
@@ -67,19 +67,16 @@
 
 @media only screen and (max-width: 850px) {
     .skills-main {
-
         .skills-container {
-
             .section {
                 flex-direction: column;
-    
+
                 .section-title {
                     text-align: start;
                     margin: 0 0 30px 0;
                 }
 
                 .tables {
-                    // background-color: red;
                     display: grid;
                     grid-template-columns: repeat(2, minmax(120px, 1fr));
                     justify-content: space-between;

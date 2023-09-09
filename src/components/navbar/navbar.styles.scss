@@ -7,10 +7,8 @@
     height: 60px;
     backdrop-filter: 10px;
     z-index: 10;
-    // border-bottom: 2px solid white;
 
     .navbar-container {
-        /* background-color: red; */
         height: 100%;
         margin: 0 50px 0 50px;
         padding: 0;
@@ -18,7 +16,7 @@
         justify-content: space-between;
         align-items: center;
 
-        .logo{
+        .logo {
             width: 40px;
             height: 40px;
             border-radius: 50px;
@@ -83,18 +81,6 @@
                     i {
                         cursor: pointer;
                     }
-
-
-                    // .circle {
-                    //     align-self: bottom;
-                    //     justify-self: start;
-
-                    //     border: 1.5px solid var(--text-color-main);
-                    //     background-color: var(--text-color-main);
-                    //     height: 15px;
-                    //     width: 15px;
-                    //     border-radius: 50%;
-                    // }
                 }
             }
         }
@@ -120,24 +106,20 @@
 
 @media only screen and (max-width: 850px) {
     .navbar-main {
-
-    
         .navbar-container {
             margin: 0 20px 0 20px;
-    
-            .logo{
-                display: none;
-                
-                p {
 
-                }
+            .logo {
+                display: none;
+
+                p {}
             }
 
             .burger {
                 display: block;
                 cursor: pointer;
                 z-index: 10;
-                
+
                 div {
                     transition: all 400ms ease-in-out;
                 }
@@ -145,13 +127,15 @@
                 .toggle1 {
                     transform: rotate(-45deg) translate(-5px, 6px);
                 }
+
                 .toggle2 {
                     opacity: 0;
                 }
+
                 .toggle3 {
                     transform: rotate(45deg) translate(-5px, -6px);
                 }
-    
+
             }
 
             .nav-active {
@@ -159,7 +143,7 @@
                 opacity: 1;
             }
 
-    
+
             nav {
                 background-color: var(--bg-color-alt2);
                 position: absolute;
@@ -172,17 +156,13 @@
                 opacity: 0;
                 transition: ease-in-out 0.5s;
 
-                // .mode {
-                //     display: inline;
-                // }
-
                 ul {
                     margin-top: 60px;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
                     height: 60%;
-    
+
                     li {
                         opacity: 0;
                         font-size: 1.4rem;
@@ -192,6 +172,7 @@
                                 opacity: 0;
                                 transform: translate(50px);
                             }
+
                             to {
                                 opacity: 1;
                                 transform: translate(0px);

@@ -51,7 +51,7 @@
             font-family: var(--text-font-alt);
             font-size: 1.15rem;
             font-weight: 400;
-            
+
             .arrow-email {
                 transition: ease 200ms;
             }
@@ -70,7 +70,7 @@
                     background-color: var(--text-color-special);
                     color: var(--text-color-alt);
                 }
-                
+
             }
         }
     }
@@ -80,19 +80,17 @@
 
 @media only screen and (max-width: 850px) {
     .home-main {
-    
         .home-container {
-    
             .intro {
                 margin: auto 20px auto 20px;
                 font-size: 8vw;
             }
-    
+
             .title {
                 margin: 15% 20px 15% 20px;
                 font-size: 8vw;
             }
-    
+
             i {
                 margin-left: 10px;
             }
@@ -108,14 +106,16 @@
 }
 
 @keyframes hello {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(0deg);
         transform-origin: 100% 100%;
-        
+
     }
+
     50% {
         transform: rotate(20deg);
         transform-origin: 100% 100%;
     }
 }
-

@@ -1,8 +1,6 @@
 import React from 'react';
-// import "./contact.styles.scss";
 
-
-export default function Contact(props) {
+export default function Contact() {
     return (
         <div className="contact-container" id="contact">
             <div className="contact-main">
