@@ -14,17 +14,13 @@
 
         .intro {
             margin: auto 20px auto 20px;
-            // background-color: red;
             font-family: var(--text-font-alt);
             font-size: 2.5rem;
             font-weight: 400;
-            // animation: hello 3s infinite;
 
             .hand {
                 display: inline-block;
                 cursor: pointer;
-                // color: var(--text-color-alt);
-                // animation: hello ease-in-out 0.25s 3 0.4s;
             }
         }
 
@@ -61,10 +57,8 @@
             }
 
             .email {
-                // color: $text-color-special;
                 transition: ease 200ms;
                 padding: 5px;
-                // color: $text-color-alt;
 
                 &:hover {
                     background-color: var(--text-color-special);
@@ -75,8 +69,6 @@
         }
     }
 }
-
-
 
 @media only screen and (max-width: 850px) {
     .home-main {

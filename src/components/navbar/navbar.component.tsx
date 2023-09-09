@@ -16,13 +16,19 @@ export default function Navbar() {
     // SCROLL ARROW //
     //////////////////
     useEffect(() => {
-        window.addEventListener('scroll', (e) => {
+        const scrollhandler = () => {
             if (window.pageYOffset * 4 / 3 <= window.screen.height) {
                 setbackButton(false)
             } else {
                 setbackButton(true)
             }
-        });
+        };
+
+        window.addEventListener('scroll', scrollhandler);
+
+        return () => {
+            window.removeEventListener('scroll', scrollhandler);
+        }
     }, [])
 
     ///////////////
@@ -30,7 +36,7 @@ export default function Navbar() {
     ///////////////
     const handleMode = () => {
         let memo = window.localStorage
-        memo.setItem("darkMode", !darkMode)
+        memo.setItem("darkMode", darkMode ? 'false' : 'true')
         setDarkMode(!darkMode)
     }
 
@@ -42,16 +48,19 @@ export default function Navbar() {
         }
 
         if (!darkMode) {
-            document.querySelector("body").classList.add("light-mode");
+            document.querySelector("body")?.classList.add("light-mode");
         } else {
-            document.querySelector("body").classList.remove("light-mode");
+            document.querySelector("body")?.classList.remove("light-mode");
         }
     }, [darkMode])
 
     ////////////////
     // MENU ITEMS //
     ////////////////
-    const menu = {
+
+    type MenuList = Record<string, string>
+
+    const menu: MenuList = {
         Home: "#home",
         About: "#about",
         Skills: "#skills",
@@ -63,10 +72,10 @@ export default function Navbar() {
         return (
             <li
                 key={i}
-                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards ${i / Object.keys(menu).length + 0.4}s` } : null}
+                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards ${i / Object.keys(menu).length + 0.4}s` } : undefined}
             >
                 <a
-                    href={menu[item]}
+                    href={menu[item as keyof MenuList]}
                     onClick={handleClickBurger}
                 > {i === Object.keys(menu).length - 1 ? <span className="nav-archive">{item}</span> : item}</a>
             </li>
@@ -92,8 +101,10 @@ export default function Navbar() {
                         {menuList}
                         <li>
                             <div className="mode"
-                                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5.4s` } : null}
-                            >{darkMode ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i> : <i className="far fa-circle" onClick={handleMode}></i>}
+                                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5.4s` } : undefined}
+                            >{darkMode
+                                ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i>
+                                : <i className="far fa-circle" onClick={handleMode}></i>}
                             </div>
                         </li>
                         {/* <li>
@@ -110,5 +121,4 @@ export default function Navbar() {
             <a href="#home" ><i className={"fas fa-arrow-circle-up fa-2x arrow" + (backButton ? " arrow-active" : "")} ></i></a>
         </header>
     )
-
 }

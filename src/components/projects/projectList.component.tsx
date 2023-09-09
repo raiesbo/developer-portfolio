@@ -1,6 +1,11 @@
-import Project from "./project.component";
+import Project from "../../types/Project";
+import ProjectItem from "./projectItem.component";
 
-export default function ProjectList({ projects }) {
+type Props = {
+    projects: Array<Project>
+}
+
+export default function ProjectList({ projects }: Props) {
     return (
         <div className="projects-main" id="projects">
             <div className="projects-container">
@@ -8,7 +13,7 @@ export default function ProjectList({ projects }) {
                     <h4 className="section-title">Featured projects</h4>
                     <div className="section-content">
                         {projects.map((project, id) => (
-                            <Project project={project} key={id} />
+                            <ProjectItem project={project} key={id} />
                         ))}
                     </div>
                 </div>

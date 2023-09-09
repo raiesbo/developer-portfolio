@@ -1,5 +1,12 @@
-export default function Project({ project }) {
-    const img = `${process.env.PUBLIC_URL}/img/${project.thumbnail}`;
+import Project from "../../types/Project";
+
+
+type Props = {
+    project: Project
+}
+
+export default function ProjectItem({ project }: Props) {
+    const img = `/img/${project.thumbnail}`;
 
     return (
         <div className="project-tile">

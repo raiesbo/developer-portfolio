@@ -1,4 +1,10 @@
-export default function Skills({ about }) {
+import About from "../../types/AboutData";
+
+type Props = {
+    about: About
+};
+
+export default function Skills({ about }: Props) {
     return (
         <div className="skills-main" id="skills">
             <div className="skills-container">
