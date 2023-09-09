@@ -6,7 +6,7 @@ import Home from "../components/home/home.component";
 import Navbar from "../components/navbar/navbar.component";
 import ProjectList from "../components/projects/projectList.component";
 
-const profil = require("../assets/profile.archive.json");
+const profile = require("../assets/profile.archive.json");
 const projects = require("../assets/projects.archive.json");
 
 
@@ -14,9 +14,9 @@ export default function Main() {
     return (
         <div className="main-container" >
             <Navbar />
-            <Home profil={profil} />
-            <About profil={profil} />
-            <Skills profil={profil} />
+            <Home profile={profile} />
+            <About about={profile.about} />
+            <Skills about={profile.about} />
             <ProjectList projects={projects} />
             <Footer />
         </div>

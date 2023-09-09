@@ -1,6 +1,4 @@
-export default function Skills({ profil }) {
-    const { about } = profil
-
+export default function Skills({ about }) {
     return (
         <div className="skills-main" id="skills">
             <div className="skills-container">

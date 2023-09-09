@@ -1,6 +1,4 @@
-export default function About({ profil }) {
-    const { about } = profil
-
+export default function About({ about }) {
     return (
         <div className="about-main" id="about">
             <div className="about-container">
