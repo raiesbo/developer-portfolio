@@ -9,7 +9,7 @@ export default function About({ about }: Props) {
         <div className="about-main" id="about">
             <div className="about-container">
                 <div className="section">
-                    <h4 className="section-title">{Object.keys(about)[0].toUpperCase()}</h4>
+                    <h4 className="section-title">Background</h4>
                     <div className="section-content">
                         {about.background.map((item, i) => (
                             <p key={i} className="background-paragraph">

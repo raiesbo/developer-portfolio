@@ -68,16 +68,24 @@ export default function Navbar() {
         Archive: "https://archive.raiesbo.com/"
     }
 
-    const menuList = Object.keys(menu).map((item, i) => {
+    const menuItems = Object.keys(menu)
+
+    // Staggered fade-in for the mobile menu. Must be applied to the <li>,
+    // because the CSS hides every <li> with opacity: 0 on small screens.
+    const fadeIn = (i: number) => burgerMenu
+        ? { animation: `navLinksFade 0.5s ease forwards ${i / menuItems.length + 0.4}s` }
+        : undefined
+
+    const menuList = menuItems.map((item, i) => {
         return (
             <li
                 key={i}
-                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards ${i / Object.keys(menu).length + 0.4}s` } : undefined}
+                style={fadeIn(i)}
             >
                 <a
                     href={menu[item as keyof MenuList]}
                     onClick={handleClickBurger}
-                > {i === Object.keys(menu).length - 1 ? <span className="nav-archive">{item}</span> : item}</a>
+                > {i === menuItems.length - 1 ? <span className="nav-archive">{item}</span> : item}</a>
             </li>
         )
     })
@@ -99,10 +107,8 @@ export default function Navbar() {
                 <nav className={burgerMenu ? " nav-active" : ""}>
                     <ul>
                         {menuList}
-                        <li>
-                            <div className="mode"
-                                style={burgerMenu ? { animation: `navLinksFade 0.5s ease forwards 5.4s` } : undefined}
-                            >{darkMode
+                        <li style={fadeIn(menuItems.length)}>
+                            <div className="mode">{darkMode
                                 ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i>
                                 : <i className="far fa-circle" onClick={handleMode}></i>}
                             </div>
