@@ -1,0 +1,20 @@
+// Sizing mirrors the Font Awesome classes these icons replace (fa-xs, fa-lg, fa-2x).
+.icon {
+    display: inline-block;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+.icon-xs {
+    font-size: 0.75em;
+}
+
+.icon-lg {
+    font-size: 1.3333em;
+    vertical-align: -0.225em;
+}
+
+.icon-2x {
+    font-size: 2em;
+}

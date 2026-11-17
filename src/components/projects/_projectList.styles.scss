@@ -14,7 +14,7 @@
         .section-2 {
             margin-top: calc(15% - 60px);
 
-            i {
+            .icon {
                 margin-left: 10px;
                 margin-right: 10px;
                 color: var(--text-color-special);
@@ -30,20 +30,20 @@
                 text-align: center;
                 margin-top: 30px;
 
-                .fa-arrow-right {
+                .arrow-right {
                     transition: ease 200ms;
                 }
 
-                .fa-arrow-left {
+                .arrow-left {
                     transition: ease 200ms;
                     transform: translateX(-5px);
                 }
 
-                &:hover .fa-arrow-right {
+                &:hover .arrow-right {
                     transform: translateX(7px);
                 }
 
-                &:hover .fa-arrow-left {
+                &:hover .arrow-left {
                     transform: translateX(-10px);
                 }
 
@@ -94,6 +94,7 @@
                     .projects-thumbnail {
                         grid-area: img;
                         width: 400px;
+                        height: auto;
                         margin-right: 30px;
                         box-shadow: 0 0 30px var(--shadow-color);
                         border-radius: 5px;
@@ -144,7 +145,7 @@
                             }
                         }
 
-                        i {
+                        .icon {
                             margin-right: 5px;
                             color: var(--text-color-special);
                         }

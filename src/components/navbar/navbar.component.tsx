@@ -1,4 +1,7 @@
+import { faCircle as faCircleRegular } from "@fortawesome/free-regular-svg-icons";
+import { faCircle, faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import Icon from "../icon/icon.component";
 // import "./navbar.styles.scss";
 
 
@@ -24,7 +27,7 @@ export default function Navbar() {
             }
         };
 
-        window.addEventListener('scroll', scrollhandler);
+        window.addEventListener('scroll', scrollhandler, { passive: true });
 
         return () => {
             window.removeEventListener('scroll', scrollhandler);
@@ -109,8 +112,8 @@ export default function Navbar() {
                         {menuList}
                         <li style={fadeIn(menuItems.length)}>
                             <div className="mode">{darkMode
-                                ? <i className="fas fa-circle fa-1x" onClick={handleMode}></i>
-                                : <i className="far fa-circle" onClick={handleMode}></i>}
+                                ? <Icon icon={faCircle} onClick={handleMode} />
+                                : <Icon icon={faCircleRegular} onClick={handleMode} />}
                             </div>
                         </li>
                         {/* <li>
@@ -124,7 +127,7 @@ export default function Navbar() {
                     </ul>
                 </nav>
             </div>
-            <a href="#home" ><i className={"fas fa-arrow-circle-up fa-2x arrow" + (backButton ? " arrow-active" : "")} ></i></a>
+            <a href="#home" ><Icon icon={faCircleArrowUp} size="2x" className={"arrow" + (backButton ? " arrow-active" : "")} /></a>
         </header>
     )
 }

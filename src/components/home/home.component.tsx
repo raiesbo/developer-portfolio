@@ -1,5 +1,7 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import Profile from "../../types/Profile";
+import Icon from "../icon/icon.component";
 
 type Props = {
     profile: Profile
@@ -35,7 +37,7 @@ export default function Home({ profile }: Props) {
                 </h1>
                 <h4 className="contact">
                     Get In Touch
-                    <i className="fas fa-arrow-right arrow-email"></i>
+                    <Icon icon={faArrowRight} className="arrow-email" />
                     <a href={`mailto:${profile.email}`}>
                         <span className="email">
                             {profile.email}
