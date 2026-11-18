@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+# Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio, where I share my background, skills and featured projects as a design-driven web developer and architect.
 
-Currently, two official plugins are available:
+**Live site:** [raiesbo.com](https://raiesbo.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) for development and builds
+- [Sass (SCSS)](https://sass-lang.com/) for styling, with a light and dark theme
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting started
 
-- Configure the top-level `parserOptions` property like this:
+Requires [Node.js](https://nodejs.org/) 18 or newer.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+git clone https://github.com/raiesbo/developer-portfolio.git
+cd developer-portfolio
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then open http://localhost:5173.
+
+## Scripts
+
+| Command           | Description                                       |
+| ----------------- | ------------------------------------------------- |
+| `npm run dev`     | Start the development server                      |
+| `npm run build`   | Type-check and build for production into `dist/`  |
+| `npm run preview` | Serve the production build locally                |
+| `npm run lint`    | Lint the source with ESLint                       |
+
+## Editing the content
+
+I keep all the text in two JSON files, so I can update the site without touching any components:
+
+- `src/assets/profile.archive.json`: intro, background and skills
+- `src/assets/projects.archive.json`: featured projects (put their thumbnails in `public/img/`)
+
+In the profile text, wrap words in double dashes to highlight them, for example `I am a --web developer--`.
