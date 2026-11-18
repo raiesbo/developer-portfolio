@@ -9,10 +9,16 @@ import Icon from "../icon/icon.component";
 export default function Navbar() {
     const [burgerMenu, setBurgerMenu] = useState(false)
     const [backButton, setbackButton] = useState(false)
-    const [darkMode, setDarkMode] = useState(true)
+    // The inline script in index.html applies the saved theme before the first paint,
+    // so start from whatever it chose.
+    const [darkMode, setDarkMode] = useState(() => !document.documentElement.classList.contains("light-mode"))
 
     const handleClickBurger = () => {
-        setBurgerMenu(!burgerMenu)
+        setBurgerMenu(open => !open)
+    }
+
+    const closeMenu = () => {
+        setBurgerMenu(false)
     }
 
     //////////////////
@@ -20,13 +26,10 @@ export default function Navbar() {
     //////////////////
     useEffect(() => {
         const scrollhandler = () => {
-            if (window.pageYOffset * 4 / 3 <= window.screen.height) {
-                setbackButton(false)
-            } else {
-                setbackButton(true)
-            }
+            setbackButton(window.scrollY > window.innerHeight * 0.75)
         };
 
+        scrollhandler();
         window.addEventListener('scroll', scrollhandler, { passive: true });
 
         return () => {
@@ -38,22 +41,15 @@ export default function Navbar() {
     // DARK MODE //
     ///////////////
     const handleMode = () => {
-        let memo = window.localStorage
-        memo.setItem("darkMode", darkMode ? 'false' : 'true')
-        setDarkMode(!darkMode)
+        setDarkMode(mode => !mode)
     }
 
     useEffect(() => {
-        let isDarkModeOn = window.localStorage.getItem("darkMode")
-
-        if (isDarkModeOn === "false") {
-            setDarkMode(false)
-        }
-
-        if (!darkMode) {
-            document.querySelector("body")?.classList.add("light-mode");
-        } else {
-            document.querySelector("body")?.classList.remove("light-mode");
+        document.documentElement.classList.toggle("light-mode", !darkMode)
+        try {
+            localStorage.setItem("darkMode", String(darkMode))
+        } catch {
+            // Storage can be unavailable (e.g. blocked site data); the theme still works for this visit.
         }
     }, [darkMode])
 
@@ -87,7 +83,7 @@ export default function Navbar() {
             >
                 <a
                     href={menu[item as keyof MenuList]}
-                    onClick={handleClickBurger}
+                    onClick={closeMenu}
                 > {i === menuItems.length - 1 ? <span className="nav-archive">{item}</span> : item}</a>
             </li>
         )

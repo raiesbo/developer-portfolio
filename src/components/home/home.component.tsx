@@ -8,20 +8,19 @@ type Props = {
 }
 
 export default function Home({ profile }: Props) {
-    const [hello, setHello] = useState(false)
+    // Starts as true so the hand waves once on load.
+    const [hello, setHello] = useState(true)
 
     const sayHello = () => {
-        if (!hello) {
-            setHello(true)
-            setTimeout(() => {
-                setHello(false)
-            }, 1000);
-        }
+        setHello(true)
     }
 
+    // Reset after the 1s wave animation; the cleanup cancels the timer on unmount.
     useEffect(() => {
-        sayHello()
-    }, [])
+        if (!hello) return
+        const timeout = setTimeout(() => setHello(false), 1000)
+        return () => clearTimeout(timeout)
+    }, [hello])
 
     return (
         <div className="home-main" id="home">
