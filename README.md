@@ -8,7 +8,7 @@ My personal portfolio, where I share my background, skills and featured projects
 
 - [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/) for development and builds
-- [Sass (SCSS)](https://sass-lang.com/) for styling, with a light and dark theme
+- Plain CSS (native nesting and custom properties) for styling, with a light and dark theme
 
 ## Getting started
 

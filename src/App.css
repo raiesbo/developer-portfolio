@@ -1,45 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html {
+  scroll-behavior: smooth;
+  /* Keeps anchor targets and keyboard focus clear of the fixed 60px navbar (WCAG 2.4.11). */
+  scroll-padding-top: calc(60px + 1rem);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+:focus-visible {
+  outline: 2px solid var(--text-color-special);
+  outline-offset: 3px;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Visitors who ask their system for less motion get instant changes instead of animations. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  to {
-    transform: rotate(360deg);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.card {
-  padding: 2em;
+body {
+  background-color: var(--bg-color-main);
+  font-family: var(--text-font-main);
+  color: var(--text-color-main);
+  line-height: 1.5;
 }
 
-.read-the-docs {
-  color: #888;
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+/* scroll */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--text-color-alt2);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color-special);
 }

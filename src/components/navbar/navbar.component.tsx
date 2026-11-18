@@ -2,7 +2,6 @@ import { faCircle as faCircleRegular } from "@fortawesome/free-regular-svg-icons
 import { faCircle, faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import Icon from "../icon/icon.component";
-// import "./navbar.styles.scss";
 
 
 

@@ -7,8 +7,8 @@
     height: 60px;
     z-index: 10;
 
-    // The blur sits on a pseudo-element: backdrop-filter on the header itself would make the
-    // header the containing block for the fixed back-to-top arrow and pin the arrow inside it.
+    /* The blur sits on a pseudo-element: backdrop-filter on the header itself would make the
+       header the containing block for the fixed back-to-top arrow and pin the arrow inside it. */
     &::before {
         content: "";
         position: absolute;
@@ -92,7 +92,7 @@
                         color: var(--text-color-special);
                     }
 
-                    // At least 24 x 24 px, the WCAG 2.2 minimum target size.
+                    /* At least 24 x 24 px, the WCAG 2.2 minimum target size. */
                     .mode {
                         display: inline-flex;
                         align-items: center;
@@ -136,8 +136,6 @@
 
             .logo {
                 display: none;
-
-                p {}
             }
 
             .burger {
@@ -181,7 +179,7 @@
 
                 transform: translateX(100%);
                 opacity: 0;
-                // Hidden links must not be reachable with Tab; visibility flips once the slide-out ends.
+                /* Hidden links must not be reachable with Tab; visibility flips once the slide-out ends. */
                 visibility: hidden;
                 transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 
@@ -195,18 +193,6 @@
                     li {
                         opacity: 0;
                         font-size: 1.4rem;
-
-                        @keyframes navLinksFade {
-                            from {
-                                opacity: 0;
-                                transform: translate(50px);
-                            }
-
-                            to {
-                                opacity: 1;
-                                transform: translate(0px);
-                            }
-                        }
                     }
                 }
             }
@@ -215,6 +201,19 @@
         .arrow {
             right: 20px;
             bottom: 20px;
+        }
+    }
+
+    /* Plain CSS can't nest @keyframes inside a style rule (Sass used to hoist it here for us). */
+    @keyframes navLinksFade {
+        from {
+            opacity: 0;
+            transform: translate(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate(0px);
         }
     }
 }

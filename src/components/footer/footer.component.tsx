@@ -16,7 +16,7 @@ export default function Footer() {
                     <a href="https://raiesbo.com/" target="_blank" rel="noreferrer" title="Portfolio"><Icon icon={faFile} size="lg" /></a>
                 </div>
                 <h5>
-                    Built and Designed with <span>React, Vite, Scss</span> by <br />
+                    Built and Designed with <span>React, Vite, CSS</span> by <br />
                     <a href="https://raiesbo.com/" title="personal website" target="_blank" rel="noreferrer"><span className="enfas">raiesbo</span></a>
                 </h5>
             </div>
