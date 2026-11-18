@@ -49,8 +49,13 @@
         .burger {
             display: none;
             align-items: center;
+            padding: 0;
+            border: 0;
+            background: none;
+            color: inherit;
 
-            div {
+            span {
+                display: block;
                 background-color: var(--text-color-alt);
                 height: 3px;
                 width: 25px;
@@ -87,7 +92,18 @@
                         color: var(--text-color-special);
                     }
 
-                    .icon {
+                    // At least 24 x 24 px, the WCAG 2.2 minimum target size.
+                    .mode {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 24px;
+                        min-height: 24px;
+                        padding: 4px;
+                        border: 0;
+                        background: none;
+                        color: inherit;
+                        font: inherit;
                         cursor: pointer;
                     }
                 }
@@ -129,7 +145,7 @@
                 cursor: pointer;
                 z-index: 10;
 
-                div {
+                span {
                     transition: all 400ms ease-in-out;
                 }
 
@@ -150,6 +166,8 @@
             .nav-active {
                 transform: translateX(0%);
                 opacity: 1;
+                visibility: visible;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s;
             }
 
 
@@ -163,7 +181,9 @@
 
                 transform: translateX(100%);
                 opacity: 0;
-                transition: ease-in-out 0.5s;
+                // Hidden links must not be reachable with Tab; visibility flips once the slide-out ends.
+                visibility: hidden;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 
                 ul {
                     margin-top: 60px;

@@ -1,5 +1,29 @@
 html {
   scroll-behavior: smooth;
+  // Keeps anchor targets and keyboard focus clear of the fixed 60px navbar (WCAG 2.4.11).
+  scroll-padding-top: calc(60px + 1rem);
+}
+
+:focus-visible {
+  outline: 2px solid var(--text-color-special);
+  outline-offset: 3px;
+}
+
+// Visitors who ask their system for less motion get instant changes instead of animations.
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
 }
 
 * {

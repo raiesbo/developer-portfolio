@@ -1,11 +1,11 @@
-@import "./variables.styles";
+@use "./variables.styles";
 
-@import "../App";
+@use "../App";
 
-@import "../components/icon/icon.styles";
-@import "../components/about/about.styles";
-@import "../components/about/skills.styles";
-@import "../components/footer/footer.styles";
-@import "../components/home/home.styles";
-@import "../components/navbar/navbar.styles";
-@import "../components/projects/projectList.styles";
+@use "../components/icon/icon.styles";
+@use "../components/about/about.styles";
+@use "../components/about/skills.styles";
+@use "../components/footer/footer.styles";
+@use "../components/home/home.styles";
+@use "../components/navbar/navbar.styles";
+@use "../components/projects/projectList.styles";

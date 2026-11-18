@@ -27,9 +27,15 @@ export default function Home({ profile }: Props) {
             <div className="home-container">
                 <h4 className="intro">
                     Hello!
-                    <span className="hand" style={hello ? { animation: "hello ease-in-out 0.25s 3 0.25s" } : undefined} onClick={sayHello}>
+                    <button
+                        type="button"
+                        className="hand"
+                        style={hello ? { animation: "hello ease-in-out 0.25s 3 0.25s" } : undefined}
+                        onClick={sayHello}
+                        aria-label="Wave hello"
+                    >
                         👋
-                    </span>
+                    </button>
                 </h4>
                 <h1 className="title">
                     {profile.main_description.split("--").map((item, idx) => idx % 2 !== 0 ? <span className="text-highlight" key={idx}>{item}</span> : item)}

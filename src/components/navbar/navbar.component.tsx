@@ -92,25 +92,36 @@ export default function Navbar() {
     return (
         <header className="navbar-main">
             <div className="navbar-container">
-                <a href="#home">
-                    <div className="logo">
-                        <p>REB</p>
-                    </div>
+                {/* The logo class (currently display: none) sits on the link, so a hidden logo is also out of the Tab order. */}
+                <a href="#home" className="logo" aria-label="Home">
+                    <p>REB</p>
                 </a>
-                <div className={"burger"} onClick={handleClickBurger}>
-                    <div className={"line1" + (burgerMenu ? " toggle1" : "")}></div>
-                    <div className={"line2" + (burgerMenu ? " toggle2" : "")}></div>
-                    <div className={"line3" + (burgerMenu ? " toggle3" : "")}></div>
-                </div>
+                <button
+                    type="button"
+                    className="burger"
+                    onClick={handleClickBurger}
+                    aria-label="Menu"
+                    aria-expanded={burgerMenu}
+                    aria-controls="site-nav"
+                >
+                    <span className={"line1" + (burgerMenu ? " toggle1" : "")}></span>
+                    <span className={"line2" + (burgerMenu ? " toggle2" : "")}></span>
+                    <span className={"line3" + (burgerMenu ? " toggle3" : "")}></span>
+                </button>
 
-                <nav className={burgerMenu ? " nav-active" : ""}>
+                <nav id="site-nav" aria-label="Main" className={burgerMenu ? " nav-active" : ""}>
                     <ul>
                         {menuList}
                         <li style={fadeIn(menuItems.length)}>
-                            <div className="mode">{darkMode
-                                ? <Icon icon={faCircle} onClick={handleMode} />
-                                : <Icon icon={faCircleRegular} onClick={handleMode} />}
-                            </div>
+                            <button
+                                type="button"
+                                className="mode"
+                                onClick={handleMode}
+                                aria-label="Dark theme"
+                                aria-pressed={darkMode}
+                            >
+                                <Icon icon={darkMode ? faCircle : faCircleRegular} />
+                            </button>
                         </li>
                         {/* <li>
                             <div
@@ -123,7 +134,10 @@ export default function Navbar() {
                     </ul>
                 </nav>
             </div>
-            <a href="#home" ><Icon icon={faCircleArrowUp} size="2x" className={"arrow" + (backButton ? " arrow-active" : "")} /></a>
+            {/* The classes sit on the link itself, so a hidden arrow is also out of the Tab order. */}
+            <a href="#home" aria-label="Back to top" className={"arrow" + (backButton ? " arrow-active" : "")}>
+                <Icon icon={faCircleArrowUp} size="2x" />
+            </a>
         </header>
     )
 }
