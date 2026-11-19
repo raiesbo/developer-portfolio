@@ -12,7 +12,7 @@ My personal portfolio, where I share my background, skills and featured projects
 
 ## Getting started
 
-Requires [Node.js](https://nodejs.org/) 18 or newer.
+Requires [Node.js](https://nodejs.org/) 22.13 or newer. `.node-version` pins the version Cloudflare Pages builds with.
 
 ```bash
 git clone https://github.com/raiesbo/developer-portfolio.git
