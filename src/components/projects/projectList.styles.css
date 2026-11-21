@@ -14,37 +14,31 @@
         .section-2 {
             margin-top: calc(15% - 60px);
 
-            .icon {
-                margin-left: 10px;
-                margin-right: 10px;
-                color: var(--text-color-special);
-            }
-
             p {
                 font-size: 1rem;
                 font-weight: 300;
             }
 
-            span {
-                display: block;
-                text-align: center;
+            /* Scoped by class: a bare `span` selector also hit the title's .sheet-label. */
+            .archive-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
                 margin-top: 30px;
 
-                .arrow-right {
+                .icon {
+                    color: var(--text-color-special);
                     transition: ease 200ms;
                 }
 
-                .arrow-left {
-                    transition: ease 200ms;
-                    transform: translateX(-5px);
-                }
-
+                /* Arrows move symmetrically toward the link on hover. */
                 &:hover .arrow-right {
-                    transform: translateX(7px);
+                    transform: translateX(5px);
                 }
 
                 &:hover .arrow-left {
-                    transform: translateX(-10px);
+                    transform: translateX(-5px);
                 }
 
                 a {
@@ -159,12 +153,6 @@
 @media only screen and (max-width: 850px) {
     .projects-main {
         .projects-container {
-            .section-2 {
-                span {
-                    display: block;
-                }
-            }
-
             .section {
                 flex-direction: column;
 

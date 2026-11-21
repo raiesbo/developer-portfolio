@@ -24,7 +24,7 @@ export default function ProjectList({ projects }: Props) {
                     <SectionTitle sheet="A-04">More projects</SectionTitle>
                     <div className="section-content">
                         <p>After the featured projects, if you are more curious and want to see my complete list of projects, please visit:
-                            <span>
+                            <span className="archive-link">
                                 <Icon icon={faArrowRight} className="arrow-right" /><a href="https://archive.raiesbo.com/" className="link">ARCHIVE</a><Icon icon={faArrowLeft} className="arrow-left" />
                             </span>
                         </p>
