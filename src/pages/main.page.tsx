@@ -2,6 +2,7 @@ import profile from '../assets/profile.archive.json';
 import projects from '../assets/projects.archive.json';
 import About from "../components/about/about.component";
 import Skills from "../components/about/skills.component";
+import Contact from "../components/contact/contact.component";
 import Footer from "../components/footer/footer.component";
 import Home from "../components/home/home.component";
 import Navbar from "../components/navbar/navbar.component";
@@ -15,6 +16,7 @@ export default function Main() {
             <About about={profile.about} />
             <Skills about={profile.about} />
             <ProjectList projects={projects} />
+            <Contact profile={profile} />
             <Footer />
         </div>
     )

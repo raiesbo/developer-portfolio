@@ -13,11 +13,11 @@ export default function Footer() {
                     <a href="https://www.freecodecamp.org/raiesbo" target="_blank" rel="noreferrer" title="freeCodeCamp"><Icon icon={faFreeCodeCamp} size="lg" /></a>
                     <a href="https://www.linkedin.com/in/raiesbo/" target="_blank" rel="noreferrer" title="LinkedIn"><Icon icon={faLinkedinIn} size="lg" /></a>
                     <a href="https://archive.raiesbo.com/" target="_blank" rel="noreferrer" title="Archive"><Icon icon={faBoxArchive} /></a>
-                    <a href="https://raiesbo.com/" target="_blank" rel="noreferrer" title="Portfolio"><Icon icon={faFile} size="lg" /></a>
+                    <a href="https://raiesbo.dev/" target="_blank" rel="noreferrer" title="Portfolio"><Icon icon={faFile} size="lg" /></a>
                 </div>
                 <h5>
                     Built and Designed with <span>React, Vite, CSS</span> by <br />
-                    <a href="https://raiesbo.com/" title="personal website" target="_blank" rel="noreferrer"><span className="enfas">raiesbo</span></a>
+                    <a href="https://raiesbo.dev/" title="personal website" target="_blank" rel="noreferrer"><span className="enfas">raiesbo</span></a>
                 </h5>
             </div>
         </footer>

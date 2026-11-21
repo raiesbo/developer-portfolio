@@ -1,5 +1,4 @@
 [
-    
     {
         "title": "octocat Profiler",
         "description": "Full stack project that seeks to present the public github user information in a nicer looking way and provide some extra interesting filtered information and stats. This new version also includes new graphs in D3.js.",
@@ -36,15 +35,16 @@
     },
     {
         "title": "devPortfolio",
-        "description": "Online web portfolio where to describe some professional skills, experience, background, progress and showcase featured projects in the software development, web application and websites context.",
+        "description": "This site: my developer portfolio, rebuilt in 2026 with React, TypeScript and Vite, with light and dark themes, self-hosted fonts and icons, and keyboard-accessible navigation.",
         "tags": [
             "React",
-            "Sass",
-            "react-reveal"
+            "TypeScript",
+            "Vite",
+            "CSS"
         ],
         "links": {
-            "website": "https://raiesbo.com/",
-            "github": "https://github.com/raiesbo/devPortfolio"
+            "website": "https://raiesbo.dev/",
+            "github": "https://github.com/raiesbo/developer-portfolio"
         },
         "date": "2021",
         "thumbnail": "devPortfolio_500x300_v2.gif"

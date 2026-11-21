@@ -1,0 +1,131 @@
+.contact-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+
+    .contact-container {
+        margin: 0 20px;
+        width: 100%;
+        max-width: 900px;
+
+        .section {
+            display: flex;
+            flex-direction: row;
+
+            .section-title {
+                text-align: end;
+                width: 16rem;
+                margin: 0 60px 0 0;
+                color: var(--text-color-special);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            .section-content {
+                width: 100%;
+            }
+        }
+
+        .availability {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-color-alt);
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            .status-dot {
+                flex-shrink: 0;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--status-color);
+                box-shadow: 0 0 0 4px var(--status-halo);
+            }
+        }
+
+        .contact-text {
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            padding: 10px 18px;
+            border: 1px solid var(--text-color-special);
+            border-radius: 2px;
+            background: none;
+            color: var(--text-color-special);
+            font-family: var(--text-font-mono);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color ease 200ms, color ease 200ms;
+            overflow-wrap: anywhere;
+
+            &:hover {
+                background-color: var(--text-color-special);
+                color: var(--text-on-special);
+            }
+        }
+
+        .button-primary {
+            background-color: var(--text-color-special);
+            color: var(--text-on-special);
+
+            &:hover {
+                background-color: transparent;
+                color: var(--text-color-special);
+            }
+        }
+
+        .copy-status {
+            min-height: 1.5em;
+            margin: 10px 0 20px;
+            font-size: 0.85rem;
+            font-family: var(--text-font-mono);
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                min-height: 24px;
+                transition: color ease 200ms;
+
+                &:hover {
+                    color: var(--text-color-special);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .contact-main {
+        .contact-container {
+            .section {
+                flex-direction: column;
+
+                .section-title {
+                    text-align: start;
+                    margin: 0 0 30px 0;
+                }
+            }
+        }
+    }
+}

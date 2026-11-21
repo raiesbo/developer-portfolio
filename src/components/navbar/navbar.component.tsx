@@ -63,6 +63,7 @@ export default function Navbar() {
         About: "#about",
         Skills: "#skills",
         Projects: "#projects",
+        Contact: "#contact",
         Archive: "https://archive.raiesbo.com/"
     }
 

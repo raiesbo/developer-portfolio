@@ -55,7 +55,7 @@
 
                     &:hover {
                         background-color: var(--text-color-special);
-                        color: var(--text-color-alt);
+                        color: var(--text-on-special);
                     }
                 }
             }

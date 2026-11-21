@@ -3,17 +3,23 @@
     "surname": "Espasa",
     "nickname": "raiesbo",
     "email": "raiesbo@gmail.com",
-    "website": "raiesbo.com",
+    "website": "raiesbo.dev",
     "archive": "archive.raiesbo.com",
     "main_description": "I am --Raimon Espasa--, design-driven --web developer-- and architect, passionate about building exceptional --websites-- and --applications--.",
+    "availability": "Open to conversations about backend, cloud and product engineering roles.",
+    "links": {
+        "github": "https://github.com/raiesbo",
+        "linkedin": "https://www.linkedin.com/in/raiesbo/"
+    },
     "about": {
         "background": [
-            "I am a berlin-based --web developer-- graduated in architecture in 2016 from the --Polytechnic University of Valencia--. In mid-2019 I discovered and took my first steps in the field of web development and software engineering.",
+            "I am a Berlin-based --web developer-- graduated in architecture in 2016 from the --Polytechnic University of Valencia--. In mid-2019 I discovered and took my first steps in the field of web development and software engineering.",
             "Passionate about the details, as a --front-end developer-- I enjoy writing well-written and efficient code that translates into attractive and functional interfaces with modern frameworks. My 5-year experience as an architect not only has taught me the design and project development principles but also team work, the collective ownership of projects and empathy to share my experience and knowledge with my team and continue progressing.",
-            "I love reading, especially the fantasy and sci/fi genres, so --when I am not in front of the computer--, I am probably enjoying a good book, learning new things, going for a run or simply hanging out with friends."
+            "I love reading, especially the fantasy and sci-fi genres, so --when I am not in front of the computer--, I am probably enjoying a good book, learning new things, going for a run or simply hanging out with friends."
         ],
         "skills": {
             "languages": [
+                "TypeScript",
                 "JavaScript (ES6+)",
                 "Python",
                 "HTML",
@@ -22,20 +28,19 @@
             "Frameworks": [
                 "ReactJS",
                 "NodeJS",
-                "D3JS",
-                "Sass"
+                "D3JS"
             ],
             "Tools": [
-                "Git / Github",
-                "MongoDB",
-                "Postman",
+                "Git / GitHub",
+                "Google Cloud",
                 "Firebase",
-                "Heroku"
+                "MongoDB",
+                "Postman"
             ],
             "Design": [
                 "InDesign",
                 "Photoshop",
-                "Ilustrator",
+                "Illustrator",
                 "Figma"
             ]
         }

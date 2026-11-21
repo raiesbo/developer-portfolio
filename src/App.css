@@ -34,9 +34,28 @@ html {
 
 body {
   background-color: var(--bg-color-main);
+  /* Faint drawing grid, like the sheet under a technical drawing. */
+  background-image:
+    linear-gradient(var(--grid-color-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color-major) 1px, transparent 1px),
+    linear-gradient(var(--grid-color-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color-minor) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
   font-family: var(--text-font-main);
   color: var(--text-color-main);
   line-height: 1.5;
+}
+
+/* Drawing-sheet number above each section title (see SectionTitle). */
+.sheet-label {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--text-font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--text-color-main);
+  opacity: 0.8;
 }
 
 a {

@@ -1,4 +1,5 @@
 import About from "../../types/AboutData";
+import SectionTitle from "../sectionTitle/sectionTitle.component";
 
 type Props = {
     about: About
@@ -9,7 +10,7 @@ export default function Skills({ about }: Props) {
         <div className="skills-main" id="skills">
             <div className="skills-container">
                 <div className="section">
-                    <h4 className="section-title">Skills</h4>
+                    <SectionTitle sheet="A-02">Skills</SectionTitle>
                     <div className="section-content tables">
                         {Object.keys(about.skills).map((item, id) => (
                             <ul key={id}>

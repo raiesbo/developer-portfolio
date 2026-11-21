@@ -1,6 +1,7 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Project from "../../types/Project";
 import Icon from "../icon/icon.component";
+import SectionTitle from "../sectionTitle/sectionTitle.component";
 import ProjectItem from "./projectItem.component";
 
 type Props = {
@@ -12,7 +13,7 @@ export default function ProjectList({ projects }: Props) {
         <div className="projects-main" id="projects">
             <div className="projects-container">
                 <div className="section section-1">
-                    <h4 className="section-title">Featured projects</h4>
+                    <SectionTitle sheet="A-03">Featured projects</SectionTitle>
                     <div className="section-content">
                         {projects.map((project, id) => (
                             <ProjectItem project={project} key={id} />
@@ -20,7 +21,7 @@ export default function ProjectList({ projects }: Props) {
                     </div>
                 </div>
                 <div className="section section-2">
-                    <h4 className="section-title">More projects</h4>
+                    <SectionTitle sheet="A-04">More projects</SectionTitle>
                     <div className="section-content">
                         <p>After the featured projects, if you are more curious and want to see my complete list of projects, please visit:
                             <span>
